@@ -45,7 +45,7 @@ namespace pryGrafeuilleTPagricola
 
         private void frmProduccion_Load(object sender, EventArgs e)
         {
-            StreamReader leerCULTIVOS = new StreamReader(":/Cultivos.txt");
+            StreamReader leerCULTIVOS = new StreamReader("./cultivos.txt");
             while (!leerCULTIVOS.EndOfStream)
             {
                 cbmLocalidad.Items.Add(leerCULTIVOS.ReadLine().ToString());

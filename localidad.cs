@@ -27,12 +27,12 @@ namespace pryGrafeuilleTPagricola
         {
             TextWriter editar = new StreamWriter("./Localidades.txt",true);
 
-            editar.WriteLine(Convert.ToString(txtlocalidades.Text + " " + txtIdentificador.Text));
+            editar.WriteLine(Convert.ToString(txtlocalidades.Text + " " + npdIdentificador.Text));
             editar.Close();
 
             MessageBox.Show("se edito correctamente");
 
-            txtIdentificador.Text = "";
+            npdIdentificador.Text = "";
             txtlocalidades.Text = "";
             txtlocalidades.Focus();
 

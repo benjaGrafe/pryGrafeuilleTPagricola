@@ -20,14 +20,14 @@ namespace pryGrafeuilleTPagricola
 
         private void btnCrearCu_Click(object sender, EventArgs e)
         {
-            File.Create("./Cultivos.txt");
+            File.Create("./cultivos.txt");
             MessageBox.Show("Creaste un archivo Cultivos");
         }
 
         private void btnEditarCu_Click(object sender, EventArgs e)
         {
-            TextWriter editar = new StreamWriter("./Cultivos.txt", true);
-            editar.WriteLine(Convert.ToString(txtCultivos.Text + "" + txtIdentificador.Text));
+            TextWriter editar = new StreamWriter("./cultivos.txt", true);
+            editar.WriteLine(Convert.ToString(txtCultivos.Text + "" + nudIdentificador.Text));
             editar.Close();
 
             MessageBox.Show("se edito correctamente");
@@ -37,7 +37,7 @@ namespace pryGrafeuilleTPagricola
 
 
             txtCultivos.Text = "";
-            txtIdentificador.Text = "";
+            nudIdentificador.Text = "";
             txtCultivos.Focus();
         }
 
